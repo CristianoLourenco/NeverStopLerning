@@ -10,7 +10,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 8rem;
+  padding:0 4rem;
   min-height: 80px;
   background-color: #ffffff;
   font-family: sans-serif;
@@ -21,7 +21,6 @@ header nav.menu{
 }
 header nav.menu ul{
   display: flex;
-  
 }
 header nav.menu ul li{
   margin-right: 1.5rem;
@@ -50,4 +49,27 @@ header h2.logo{
   border-left: 5px solid blue;
   padding-left: 20px;
   font-family: 'Roboto mono';
+}
+header nav.menu .hamburguer{
+  display:none;
+}
+@media (max-width:750px) {
+  /* hamburguer menu */
+header nav.menu .hamburguer{
+  display: flex;
+}
+header nav.menu .hamburguer i.fas.fa-bars{
+  font-size: 18pt;
+  cursor: pointer;
+  padding: 1rem;
+}
+header nav.menu .hamburguer i.fas.fa-bars:hover{
+  color: blue;
+}
+header nav.menu ul {
+  display:none;
+}
+header nav.menu::before{
+ display: none;
+}
 }
