@@ -28,7 +28,8 @@ header nav.menu ul li{
   justify-content: center;
 }
 header nav.menu ul li a{
-  padding: 2rem 10px;
+  padding: 1.5rem 10px;
+  color: lightgray;
 }
 header nav.menu::before{
   content: '';
@@ -36,10 +37,11 @@ header nav.menu::before{
   height: 3px;
   background-color: rgba(0, 0, 0, 0.089);
   position: absolute;
-  bottom: -34px;
+  bottom: -26px;
 }
 header nav.menu ul li a:hover{
   border-bottom: 2px solid blue;
+  color: gray;
 
 }
 
