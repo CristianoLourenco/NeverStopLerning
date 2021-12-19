@@ -51,7 +51,7 @@ header nav.menu ul li a:hover {
 }
 
 /* logo */
-header h2.logo {
+header h2.logo, footer h2.logo {
   border-left: 5px solid #3751ff;
   padding-left: 20px;
   font-family: Roboto;
@@ -209,11 +209,66 @@ section.cards .card small{
   color: #455880;
   margin-bottom: 1rem;
 }
-section.cards .card p{
+section.cards .card p, footer p{
   font-size: 14pt;
   color: #455880;
 }
 
+/* footer */
+footer{
+  font-family: Roboto,sans-serif;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 4rem;
+  background: #3751ff;
+}
+footer .content{
+  width: 500px;
+}
+footer .content .logo{
+  margin-bottom: 1.5rem;
+  color: #fff;
+  border-left: 5px solid #fff;
+}
+footer .content p{
+  color: rgba(255, 255, 255, 0.897);
+}
+ footer .sumbenu ul li {
+margin: 2rem 1rem;
+}
+ footer .sumbenu ul li a{
+  color: lightgray;
+
+ }
+ footer .sumbenu ul li a:hover{
+   color: #fff;
+border-bottom: 2px solid #fff;
+ }
+
+footer .social{
+  display: flex;
+  flex-direction: column;
+}
+footer .social a{
+  color: lightgrey;
+  display: block;
+  padding: 0.5rem;
+  font-size: 25pt;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 95%;
+  margin: 1rem;
+}
+footer .social a:hover{
+  color: #3751ff;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 10px;
+}
 @media (max-width: 750px) {
   /* hamburguer menu */
   header nav.menu .hamburguer {
