@@ -114,7 +114,7 @@ a.botao {
 }
 
 /* secao conteudo */
-section.conteudo{
+section{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,12 +133,12 @@ section.conteudo .texto{
 section.conteudo .texto a{
   margin-top: 2.5rem;
 }
-section.conteudo .texto h2{
+section.conteudo .texto h2, .dizem h2{
   font-size: 35px;
   color: #1E266D;
   margin-bottom: 2.5rem;
 }
-section.conteudo .texto p{
+section.conteudo .texto p, section.cards .card p{
   font-size: 20px;
   color: grey;
   line-height: 30px;
@@ -167,6 +167,52 @@ section.conteudo.c{
 .active {
 }
 
+.dizem{
+  font-family: Roboto,sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+/* cards */
+section.cards{
+  justify-content: space-around;
+  min-height: 500px;
+  padding-bottom: 10rem;
+}
+section.cards .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px ;
+  min-height: 450px;
+  text-align: center;
+  border: 1px solid #3751ff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  font-family: Roboto, sans-serif;
+}
+section.cards .card i{
+  font-size: 30pt;
+  margin: 1rem;
+  color: #3751ff;
+}
+section.cards .card span{
+  font-size: 18pt;
+  font-weight: 700;
+  color: #1E266D;
+  margin-bottom: 2px;
+}
+section.cards .card small{
+  font-size: 14pt ;
+  font-weight: 500;
+  color: #455880;
+  margin-bottom: 1rem;
+}
+section.cards .card p{
+  font-size: 14pt;
+  color: #455880;
+}
 
 @media (max-width: 750px) {
   /* hamburguer menu */
