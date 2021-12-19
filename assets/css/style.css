@@ -36,15 +36,16 @@ header nav.menu ul li a {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
+  transition: .3s;
 }
-header nav.menu::before {
+/* header nav.menu::before {
   content: '';
   width: calc(312px - 23px);
   height: 3px;
   background-color: rgba(0, 0, 0, 0.089);
   position: absolute;
   bottom: -26px;
-}
+} */
 header nav.menu ul li a:hover {
   border-bottom: 2px solid blue;
   color: gray;
