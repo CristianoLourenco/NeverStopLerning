@@ -1,20 +1,19 @@
 // configuracao para abrir e fechar menu
-const hamburguer = document.querySelector(' nav.menu .hamburguer');
-const header = document.querySelector('header');
-const banner = document.querySelector('.banner');
-const ul = document.querySelector('nav.menu ul');
+const hamburguer = document.querySelector(' nav.menu .hamburguer')
+const header = document.querySelector('header')
+const banner = document.querySelector('.banner')
+const ul = document.querySelector('nav.menu ul')
 
 // colocando o menu na tela
-  hamburguer.addEventListener('click', function(){
-    ul.classList.toggle('active');
-    hamburguer.classList.toggle('blok');
-  })
+hamburguer.addEventListener('click', function () {
+  ul.classList.toggle('active')
+  hamburguer.classList.toggle('blok')
+})
 // retirando o menu da tela
-   ul.addEventListener('click',()=>{
-     hamburguer.classList.toggle('blok');
-     ul.classList.toggle('active');
-   })
- 
+ul.addEventListener('click', () => {
+  hamburguer.classList.toggle('blok')
+  ul.classList.toggle('active')
+})
 
 // usando scrollReveal
 const scrollReveal = ScrollReveal({
@@ -30,6 +29,6 @@ scrollReveal.reveal(
    #hipoteses, .ilustracao, .texto, .botao,
    .conteudo, .texto, .botao, .ilustracao,
   #comentarios, .cards, .card,
-  .content, .logo, #ul, .social `
-  ,{interval: 100}
-  )
+  .content, .logo, #ul, .social `,
+  { interval: 100 }
+)
