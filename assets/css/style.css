@@ -1,36 +1,43 @@
-*{
+* {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
+
 /* header */
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 4rem;
+  padding: 0 4rem;
   min-height: 80px;
   background-color: #ffffff;
   font-family: sans-serif;
 }
 /* menu */
-header nav.menu{
+header nav.menu {
   position: relative;
 }
-header nav.menu ul{
+header nav.menu ul {
   display: flex;
 }
-header nav.menu ul li{
+header nav.menu ul li {
   margin-right: 1.5rem;
   justify-content: center;
 }
-header nav.menu ul li a{
+header nav.menu ul li a {
   padding: 1.5rem 10px;
-  color: lightgray;
+  color: #1e266d;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
 }
-header nav.menu::before{
+header nav.menu::before {
   content: '';
   width: calc(312px - 23px);
   height: 3px;
@@ -38,41 +45,114 @@ header nav.menu::before{
   position: absolute;
   bottom: -26px;
 }
-header nav.menu ul li a:hover{
+header nav.menu ul li a:hover {
   border-bottom: 2px solid blue;
   color: gray;
 }
 
 /* logo */
-header h2.logo{
-  border-left: 5px solid blue;
+header h2.logo {
+  border-left: 5px solid #3751ff;
   padding-left: 20px;
-  font-family: 'Roboto mono';
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 31px;
+  line-height: 100%;
+  color: #1e266d;
 }
-header nav.menu .hamburguer{
-  display:none;
+header nav.menu .hamburguer {
+  display: none;
+}
+/* banner */
+.banner img{
+  width: 100vw;
+  height:100vh;
+  position: relative;
+  z-index: 0;
+}
+.banner::before{
+  content: '';
+  background:rgba(0, 0, 0, 0.603);
+  width:100%;
+  min-height:100vh;
+  position: absolute;
+  top:10;
+  left:0;
+  z-index: 1;
+}
+.banner .texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 45vh;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  font-family: 'Roboto';
+  left: 28.5vw;
+  text-align: center;
+}
+.banner .texto h1{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 40px;
+}
+.banner .texto span{
+  font-weight: 400;
+  opacity: 80%;
+  margin: 1.5rem;
+}
+/* botoes */
+a.botao {
+  padding: 15px 5rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  background: #3751ff;
+  color: white;
 }
 
-.active{
- 
-}
-@media (max-width:750px) {
-  /* hamburguer menu */
-header nav.menu .hamburguer{
+/* secao conteudo */
+section.conteudo{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 900px;
 }
-header nav.menu .hamburguer i.fas.fa-bars{
-  font-size: 18pt;
-  cursor: pointer;
-  padding: 1rem;
+section.conteudo .texto{
+  width: 500px;
+  font-family: Roboto;
 }
-header nav.menu .hamburguer i.fas.fa-bars:hover{
-  color: blue;
+section.conteudo img{
+  width: 500px;
 }
-header nav.menu ul {
-  display:none;
+
+
+
+
+
+.active {
 }
-header nav.menu::before{
- display: none;
-}
+
+
+@media (max-width: 750px) {
+  /* hamburguer menu */
+  header nav.menu .hamburguer {
+    display: flex;
+  }
+  header nav.menu .hamburguer i.fas.fa-bars {
+    font-size: 18pt;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  header nav.menu .hamburguer i.fas.fa-bars:hover {
+    color: blue;
+  }
+  header nav.menu ul {
+    display: none;
+  }
+  header nav.menu::before {
+    display: none;
+  }
 }
