@@ -36,7 +36,7 @@ header nav.menu ul li a {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
-  transition: .3s;
+  transition: color 0.3s, background .2s linear, border .1s;
 }
 /* header nav.menu::before {
   content: '';
@@ -47,7 +47,7 @@ header nav.menu ul li a {
   bottom: -26px;
 } */
 header nav.menu ul li a:hover {
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid blue ;
   color: gray;
 }
 
@@ -120,7 +120,7 @@ section{
   justify-content: space-between;
   align-items: center;
   min-height: 700px;
-  padding: 0 4.5rem;
+  padding: 4.5rem;
   flex-wrap: wrap;
 }
 section.conteudo .texto{
@@ -162,8 +162,14 @@ section.conteudo.b .texto a{
   background: white;
   color: #3751ff;
 }
-section.conteudo.c{
+/* section.conteudo.c{
   margin-top: 2rem;
+} */
+section.conteudo.a .texto, section.conteudo.c .texto {
+  margin-bottom: 4rem;
+}
+section.conteudo.b .texto{
+  margin-top: 4rem;
 }
 .active {
 }
@@ -192,6 +198,7 @@ section.cards .card{
   border-radius: 15px;
   padding: 1.5rem;
   font-family: Roboto, sans-serif;
+  margin:1rem;
 }
 section.cards .card i{
   font-size: 30pt;
@@ -227,7 +234,7 @@ footer{
   background: #3751ff;
 }
 footer .content{
-  width: 500px;
+  max-width: 500px ;
 }
 footer .content .logo{
   margin-bottom: 1.5rem;
@@ -242,7 +249,7 @@ margin: 2rem 1rem;
 }
  footer .sumbenu ul li a{
   color: lightgray;
-
+  transition: all .2s;
  }
  footer .sumbenu ul li a:hover{
    color: #fff;
@@ -262,13 +269,36 @@ footer .social a{
   height: 50px;
   text-align: center;
   line-height: 95%;
-  margin: 1rem;
+  margin: .5rem 1rem;
 }
 footer .social a:hover{
   color: #3751ff;
   border: 2px solid #fff;
   background: #fff;
   border-radius: 10px;
+}
+/* medias query's */
+
+@media (max-width: 1176px) {
+
+  .banner .texto{
+    left:24.5vw;
+  }
+  section{
+    justify-content: center;
+  }
+  section.conteudo .texto{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+}
+@media (max-width:900px) {
+  .banner .texto{
+    left:18.5vw;
+  }
 }
 @media (max-width: 750px) {
   /* hamburguer menu */
@@ -288,5 +318,53 @@ footer .social a:hover{
   }
   header nav.menu::before {
     display: none;
+  }
+  .banner .texto{
+    left:14.5vw;
+}
+section.conteudo img{
+  width: 300px;
+}
+.banner .texto h1{
+  font-size: 35px;
+  }
+  footer{
+    padding-top: 2rem;
+    text-align: center;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+  }
+footer .content{
+  min-width: 150px;
+}
+
+}
+
+
+@media (max-width:400px) {
+  .banner .texto{
+    top:180px;
+    left:0;
+  }
+  .banner .texto h1{
+    font-size: 30px;
+  }
+  body h2{
+    font-size:18pt !important ;
+  }
+  body p{
+    font-size: 14pt !important;
+  }
+  header{
+    padding:0 2.5rem;
+  }
+  footer .content{
+
+    width: 250px;
   }
 }
