@@ -5,21 +5,30 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-body, html{
-  overflow-x: hidden;
+:root{
+  --azul-escuro:hsl(235, 57%, 27%) ;
+  --azul-lilas:hsl(232, 100%, 61%);
+  --cinza-lilas:hsl(221, 30%, 39%);
+  --branco:#fff;
 }
 
-/* header */
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* =================== header =================== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4.5rem;
   min-height: 80px;
-  background-color: #ffffff;
+  background-color: var(--branco)fff;
   font-family: sans-serif;
 }
-/* menu */
+/* =================== header menu =================== */
 header nav.menu {
   position: relative;
 }
@@ -32,90 +41,92 @@ header nav.menu ul li {
 }
 header nav.menu ul li a {
   padding: 1.5rem 10px;
-  color: #1e266d;
-  font-family: Roboto;
+  color: var(--azul-escuro);
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  transition: color 0.3s, background .2s linear, border .1s;
+  transition: color 0.3s, background 0.2s linear, border 0.1s;
 }
-/* header nav.menu::before {
-  content: '';
-  width: calc(312px - 23px);
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.089);
-  position: absolute;
-  bottom: -26px;
-} */
 header nav.menu ul li a:hover {
-  border-bottom: 2px solid blue ;
+  border-bottom: 2px solid var(--azul-escuro);
   color: gray;
 }
 
-/* logo */
-header h2.logo, footer h2.logo {
-  border-left: 5px solid #3751ff;
+/* =================== header logo =================== */
+header h2.logo,
+footer h2.logo {
+  border-left: 5px solid var(--azul-lilas);
   padding-left: 20px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 31px;
   line-height: 100%;
-  color: #1e266d;
+  color: var(--azul-escuro);
+}
+header h2.logo a {
+  color: var(--azul-escuro);
 }
 header nav.menu .hamburguer {
   display: none;
 }
-/* banner */
-.banner img{
-  width: 100vw;
-  height:100vh;
+/* =================== banner =================== */
+.banner{
+  background: url(/assets/img/bg.jpg);
+  min-height: 100vh;
+  background-size: cover;
   position: relative;
   z-index: 0;
 }
-.banner::before{
+
+.banner::before {
   content: '';
-  background:rgba(0, 0, 0, 0.603);
-  width:100%;
-  min-height:100vh;
-  position: absolute;
-  top:10;
-  left:0;
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  min-height: 100vh;
+ position: absolute;
+  top: 10;
+  left: 0;
+
 }
-.banner .texto{
+.banner .texto {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: 45vh;
-  position: absolute;
-  color: white;
-  z-index: 1;
-  font-family: 'Roboto';
-  left: 28.5vw;
+  height: 100vh;
+  color: var(--branco);
+  font-family: Roboto, sans-serif;
   text-align: center;
 }
-.banner .texto h1{
-  font-family: Roboto;
+.banner .texto h1 {
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 40px;
 }
-.banner .texto span{
+.banner .texto span {
   font-weight: 400;
   opacity: 80%;
   margin: 1.5rem;
 }
+
 /* botoes */
+.banner .texto a {
+  transition: background 0.3s;
+}
 a.botao {
   padding: 15px 5rem;
   border-radius: 25px;
   margin-top: 1rem;
-  background: #3751ff;
-  color: white;
+  background: var(--azul-lilas);
+  color: var(--branco);
 }
-
-/* secao conteudo */
-section{
+.banner .texto .botao:hover {
+  color: var(--azul-lilas);
+  background: var(--branco);
+}
+/* =================== section conteudo =================== */
+section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,144 +134,149 @@ section{
   padding: 4.5rem;
   flex-wrap: wrap;
 }
-section.conteudo .texto{
+section.conteudo .texto {
   width: 500px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
-section.conteudo .texto a{
+section.conteudo .texto a {
   margin-top: 2.5rem;
 }
-section.conteudo .texto h2, .dizem h2{
+section.conteudo .texto h2,
+.dizem h2 {
   font-size: 35px;
-  color: #1E266D;
+  color: var(--azul-escuro);
   margin-bottom: 2.5rem;
 }
-section.conteudo .texto p, section.cards .card p{
+section.conteudo .texto p,
+section.cards .card p {
   font-size: 20px;
   color: grey;
   line-height: 30px;
 }
-section.conteudo img{
+section.conteudo img {
   width: 500px;
 }
 
-section.conteudo.b{
-  background: #3751ff;
+section.conteudo.b {
+  background: var(--azul-lilas);
 }
-section.conteudo.b h2{
-  color: white;
+section.conteudo.b h2 {
+  color: var(--branco);
 }
-section.conteudo.b .texto p{
-  color: white;
+section.conteudo.b .texto p {
+  color: var(--branco);
   opacity: 60%;
 }
-section.conteudo.b .texto a{
-  background: white;
-  color: #3751ff;
+section.conteudo.b .texto a {
+  background: var(--branco);
+  color: var(--azul-lilas);
 }
-/* section.conteudo.c{
-  margin-top: 2rem;
-} */
-section.conteudo.a .texto, section.conteudo.c .texto {
+section.conteudo.a .texto,
+section.conteudo.c .texto {
   margin-bottom: 4rem;
 }
-section.conteudo.b .texto{
+section.conteudo.b .texto {
   margin-top: 4rem;
 }
-.active {
+.off{
+  display: none;
 }
 
-.dizem{
-  font-family: Roboto,sans-serif;
+.dizem {
+  font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
-/* cards */
-section.cards{
+/*=================== section cards =================== */
+section.cards {
   justify-content: space-around;
   min-height: 500px;
   padding-bottom: 10rem;
 }
-section.cards .card{
+section.cards .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px ;
+  width: 300px;
   min-height: 450px;
   text-align: center;
-  border: 1px solid #3751ff;
+  border: 1px solid var(--azul-lilas);
   border-radius: 15px;
   padding: 1.5rem;
   font-family: Roboto, sans-serif;
-  margin:1rem;
+  margin: 1rem;
 }
-section.cards .card i{
+section.cards .card i {
   font-size: 30pt;
   margin: 1rem;
-  color: #3751ff;
+  color: var(--azul-lilas);
 }
-section.cards .card span{
+section.cards .card span {
   font-size: 18pt;
   font-weight: 700;
-  color: #1E266D;
+  color: var(--azul-escuro);
   margin-bottom: 2px;
 }
-section.cards .card small{
-  font-size: 14pt ;
+section.cards .card small {
+  font-size: 14pt;
   font-weight: 500;
-  color: #455880;
+  color: var(--cinza-lilas);
   margin-bottom: 1rem;
 }
-section.cards .card p, footer p{
+section.cards .card p,
+footer p {
   font-size: 14pt;
-  color: #455880;
+  color: var(--cinza-lilas);
 }
 
-/* footer */
-footer{
-  font-family: Roboto,sans-serif;
-  min-height: 500px;
+/* ================= footer ==================== */
+footer {
+  font-family: Roboto, sans-serif;
+  min-height: 400px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
   padding: 0 4rem;
-  background: #3751ff;
+  background: var(--azul-lilas);
 }
-footer .content{
-  max-width: 500px ;
+footer .content {
+  max-width: 500px;
 }
-footer .content .logo{
+footer .content .logo {
   margin-bottom: 1.5rem;
-  color: #fff;
-  border-left: 5px solid #fff;
+  color: var(--branco);
+  border-left: 5px solid var(--branco);
 }
-footer .content p{
+footer h2.logo a {
+  color: var(--branco);
+}
+footer .content p {
   color: rgba(255, 255, 255, 0.897);
 }
- footer .sumbenu ul li {
-margin: 2rem 1rem;
+footer .sumbenu ul li {
+  margin: 2rem 1rem;
 }
- footer .sumbenu ul li a{
+footer .sumbenu ul li a {
   color: lightgray;
-  transition: all .2s;
- }
- footer .sumbenu ul li a:hover{
-   color: #fff;
-border-bottom: 2px solid #fff;
- }
+  transition: all 0.2s;
+}
+footer .sumbenu ul li a:hover {
+  color: var(--branco);
+  border-bottom: 2px solid var(--branco);
+}
 
-footer .social{
+footer .social {
   display: flex;
   flex-direction: column;
 }
-footer .social a{
+footer .social a {
   color: lightgrey;
   display: block;
   padding: 0.5rem;
@@ -269,37 +285,38 @@ footer .social a{
   height: 50px;
   text-align: center;
   line-height: 95%;
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
 }
-footer .social a:hover{
-  color: #3751ff;
-  border: 2px solid #fff;
-  background: #fff;
+footer .social a:hover {
+  color: var(--azul-lilas);
+  border: 2px solid var(--branco);
+  background: var(--branco);
   border-radius: 10px;
 }
+
 /* medias query's */
-
 @media (max-width: 1176px) {
-
-  .banner .texto{
-    left:24.5vw;
+  .banner .texto {
+    left: 24.5vw;
   }
-  section{
+  section {
     justify-content: center;
   }
-  section.conteudo .texto{
+  section.conteudo .texto {
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 1rem;
   }
-  
 }
-@media (max-width:900px) {
-  .banner .texto{
-    left:18.5vw;
+/* =================== Quando for 900px ============== */
+@media (max-width: 900px) {
+  .banner .texto {
+    left: 18.5vw;
   }
 }
+
+/* =================== quando for 750px =================== */
 @media (max-width: 750px) {
   /* hamburguer menu */
   header nav.menu .hamburguer {
@@ -310,61 +327,114 @@ footer .social a:hover{
     cursor: pointer;
     padding: 1rem;
   }
+  .inicio.blok{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000 !important;
+    background: #fff;
+  }
+ul.active{
+  position: fixed;
+  background: #fff;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  display: block !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 10;
+  left: 0;
+  transition: all .3s;
+  z-index: 1 !important;
+  padding-top: 3rem;
+}
+ul.active li{
+  margin: 2rem;
+}
+ul.active li a{
+  font-size: 30px !important;
+  display: block;
+}
+ul.active li a:hover{
+  background: var(--azul-escuro);
+  border: none !important;
+  color: white !important;
+}
   header nav.menu .hamburguer i.fas.fa-bars:hover {
     color: blue;
   }
-  header nav.menu ul {
-    display: none;
-  }
-  header nav.menu::before {
-    display: none;
-  }
-  .banner .texto{
-    left:14.5vw;
+  
+header nav.menu ul {
+  display: none;
 }
-section.conteudo img{
-  width: 300px;
-}
-.banner .texto h1{
-  font-size: 35px;
+  .banner .texto {
+    left: 14.5vw;
   }
-  footer{
+  section.conteudo img {
+    width: 300px;
+  }
+  .banner .texto h1 {
+    font-size: 35px;
+  }
+  footer {
     padding-top: 2rem;
     text-align: center;
   }
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     justify-content: center;
   }
-footer .content{
-  min-width: 150px;
-}
-
-}
-
-
-@media (max-width:400px) {
-  .banner .texto{
-    top:180px;
-    left:0;
+  footer .content {
+    min-width: 150px;
   }
-  .banner .texto h1{
+}
+/* =================== quando for 450px  ===================*/
+@media (max-width: 400px) {
+  .banner .texto {
+    top: 180px;
+    left: 0;
+  }
+  .banner .texto h1 {
     font-size: 30px;
   }
-  body h2{
-    font-size:18pt !important ;
+  body h2 {
+    font-size: 18pt !important ;
   }
-  body p{
+  body p {
     font-size: 14pt !important;
   }
-  header{
-    padding:0 2.5rem;
+  header {
+    padding: 0 2.5rem;
   }
-  footer .content{
-
+  footer .content {
     width: 250px;
   }
 }
+/* header nav.menu ul {
+  display: block;
+  position: fixed;
+  top:20%;
+  left:0%;
+  height: 100vh;
+  overflow: hidden;
+}
+ header nav.menu ul li {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+header nav.menu ul li a {
+  display: block;
+  padding: 2rem 12.9rem;
+  font-size:25px ;
+}
+header nav.menu ul li a:hover{
+  border: none;
+  background: var(--azul-escuro);
+  color: white;
+}  */
