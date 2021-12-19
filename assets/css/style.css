@@ -327,7 +327,7 @@ footer .social a:hover {
     cursor: pointer;
     padding: 1rem;
   }
-  .inicio.blok{
+  .hamburguer.blok{
     position: fixed !important;
     top: 0;
     left: 0;

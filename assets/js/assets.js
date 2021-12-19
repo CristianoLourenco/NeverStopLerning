@@ -1,15 +1,20 @@
 // configuracao para abrir e fechar menu
-const hamburguer = document.querySelector(' nav.menu .hamburguer .fas.fa-bars');
+const hamburguer = document.querySelector(' nav.menu .hamburguer');
 const header = document.querySelector('header');
 const banner = document.querySelector('.banner');
 const ul = document.querySelector('nav.menu ul');
 
-
+// colocando o menu na tela
   hamburguer.addEventListener('click', function(){
     ul.classList.toggle('active');
-    header.classList.toggle('blok');
+    hamburguer.classList.toggle('blok');
   })
-
+// retirando o menu da tela
+   ul.addEventListener('click',()=>{
+     hamburguer.classList.toggle('blok');
+     ul.classList.toggle('active');
+   })
+ 
 
 
 
