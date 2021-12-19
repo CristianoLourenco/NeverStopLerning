@@ -27,7 +27,7 @@
 
 ### Screenshot
 
-![imagem](/assets/img/Site.jpg)
+![imagem](Site.jpg)
 
 
 ## Author
