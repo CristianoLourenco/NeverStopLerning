@@ -11,7 +11,7 @@
 
 # Link para o projecto.
 
-- [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://cristianolourenco.github.io/NeverStopLerning/)
 
 ### Useful resources
 
